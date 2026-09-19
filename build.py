@@ -1,10 +1,18 @@
 # -*- coding: utf-8 -*-
 """Convierte el mockup standalone (design/) en el sitio estatico de public/."""
-import re, os, json, gzip, base64, shutil, sys
+import re, os, json, gzip, base64, shutil, sys, glob
 
-SRC = "/mnt/user-data/uploads/Downloads/Red Biosfera Urbana v4 (standalone).html"
-ROOT = "/home/claude/rbu/site"
+# Rutas relativas al propio script: funciona igual en Windows, Linux o macOS.
+ROOT = os.path.dirname(os.path.abspath(__file__))
 PUB = os.path.join(ROOT, "public")
+DESIGN = os.path.join(ROOT, "design")
+
+# Mockup de origen: el .html standalone mas reciente que haya en design/.
+candidatos = sorted(glob.glob(os.path.join(DESIGN, "*standalone*.html")))
+if not candidatos:
+    sys.exit("No encontre ningun mockup *standalone*.html dentro de design/")
+SRC = max(candidatos, key=os.path.getmtime)
+print("mockup:", os.path.basename(SRC))
 
 # ---------- 1. desempaquetar ----------
 raw = open(SRC, encoding="utf-8").read().split("\n")
@@ -247,11 +255,11 @@ for cond, fname in PAGES.items():
     canonical = SITIO + ("" if fname == "index.html" else fname[:-5])
     out = HEAD.format(title=title, desc=desc, nav=nav, content=html,
                       footer=clean(FOOTER), canonical=canonical)
-    open(os.path.join(PUB, fname), "w", encoding="utf-8").write(out)
+    open(os.path.join(PUB, fname), "w", encoding="utf-8", newline="\n").write(out)
     print("->", fname, len(out))
 
-open(os.path.join(PUB, "assets/css/organic.css"), "w", encoding="utf-8").write(tokens_css.strip() + "\n")
-open(os.path.join(PUB, "assets/css/sitio.css"), "w", encoding="utf-8").write(page_css.strip() + "\n")
+open(os.path.join(PUB, "assets/css/organic.css"), "w", encoding="utf-8", newline="\n").write(tokens_css.strip() + "\n")
+open(os.path.join(PUB, "assets/css/sitio.css"), "w", encoding="utf-8", newline="\n").write(page_css.strip() + "\n")
 for k, name in font_map.items():
     open(os.path.join(PUB, "assets/fonts", name), "wb").write(FONT_NAMES[k][0])
 print("fuentes:", sorted(font_map.values()))
@@ -263,7 +271,7 @@ sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
 for slug in paginas:
     sitemap.append("  <url><loc>%s%s</loc><changefreq>monthly</changefreq></url>" % (SITIO, slug))
 sitemap.append("</urlset>")
-open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(sitemap) + "\n")
+open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8", newline="\n").write("\n".join(sitemap) + "\n")
 
 html404 = HEAD.format(
     title="Página no encontrada — Red Biosfera Urbana",
@@ -280,7 +288,7 @@ html404 = HEAD.format(
         </div>
       </section>''',
     footer=clean(FOOTER))
-open(os.path.join(PUB, "404.html"), "w", encoding="utf-8").write(html404)
+open(os.path.join(PUB, "404.html"), "w", encoding="utf-8", newline="\n").write(html404)
 print("-> sitemap.xml, 404.html")
 print("listo:", PUB)
 

@@ -1,0 +1,14 @@
+# El sitio se despliega en un servidor Linux: todo el texto viaja con LF,
+# también en clones de Windows. Evita los avisos de CRLF de Git y que Apache
+# reciba .htaccess con retornos de carro.
+* text=auto eol=lf
+
+# Binarios: Git no los toca.
+*.woff2 binary
+*.zip   binary
+*.png   binary
+*.jpg   binary
+
+# Scripts de Windows: estos sí necesitan CRLF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
