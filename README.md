@@ -96,7 +96,30 @@ a Google Fonts ni a ningún CDN.
 
 ## Despliegue
 
-Ver [DEPLOY.md](DEPLOY.md).
+### Verlo en local
+
+Desde la carpeta del proyecto:
+
+```bash
+python -m http.server 8000 --directory public
+```
+
+Abrí <http://localhost:8000/> en el navegador. Este modo muestra todas las
+páginas y el JavaScript, pero no procesa el formulario PHP.
+
+### Publicarlo en GitHub Pages
+
+El workflow de `.github/workflows/pages.yml` regenera `public/` y lo publica
+automáticamente en cada push a `main`.
+
+1. Subí el repositorio a GitHub con `git push -u origin main`.
+2. En GitHub, abrí **Settings → Pages** y elegí **GitHub Actions** como origen.
+3. Esperá a que termine la acción **Publicar en GitHub Pages**.
+
+La URL será `https://USUARIO.github.io/REPOSITORIO/`. Los formularios quedan en
+modo demostración porque GitHub Pages no ejecuta PHP.
+
+Para el despliegue con formularios funcionales en Hostinger, ver [DEPLOY.md](DEPLOY.md).
 
 ## Pendientes de contenido
 
