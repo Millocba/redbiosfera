@@ -90,6 +90,12 @@ screens["isInicio"] = screens["isInicio"][:fs] + screens["isInicio"][fe:]
 FOOTER = (FOOTER.replace('href="#institucional"', 'href="institucional.html"')
                 .replace('href="#proyectos"', 'href="proyectos.html"')
                 .replace('href="#participar"', 'href="participar.html"'))
+FOOTER = FOOTER.replace('</footer>',
+    '        <div style="display:flex;flex-direction:column;gap:4px">\n'
+    '          <span style="font-weight:600;color:var(--color-text)">Novedades</span>\n'
+    '          <a href="https://www.instagram.com/redbiosferaurbana/" target="_blank" rel="noopener">Instagram</a>\n'
+    '        </div>\n'
+    '      </footer>')
 
 # bloques condicionales del mockup -> clases reales
 def unwrap_conditions(h):
@@ -246,6 +252,23 @@ for cond, fname in PAGES.items():
     html = unwrap_conditions(html)
     html = buttons_to_links(html)
     html = clean(html)
+    if fname == "index.html":
+        html = html.replace(
+            '<button type="button" class="btn btn-ghost">Ver todas</button>',
+            '<a class="btn btn-ghost" href="https://www.instagram.com/redbiosferaurbana/" target="_blank" rel="noopener">Ver todas en Instagram</a>')
+        html = html.replace(
+            '<span class="card-kicker">Título de la novedad</span>\n            <p class="card-body">Espacio reservado para la primera nota.</p>\n            <span class="card-meta">Fecha · Categoría</span>',
+            '<a class="card-kicker" href="https://www.instagram.com/redbiosferaurbana/p/Dc2XFMjju_U/" target="_blank" rel="noopener">Del aula a una red interdisciplinaria</a>\n            <p class="card-body">Un proyecto escolar que crece con ciencia ciudadana, estaciones de monitoreo y participación en congresos.</p>\n            <span class="card-meta">3 de septiembre de 2026 · Instagram</span>', 1)
+        html = html.replace(
+            '<span class="card-kicker">Título de la novedad</span>\n            <p class="card-body">Espacio reservado para la segunda nota.</p>\n            <span class="card-meta">Fecha · Categoría</span>',
+            '<a class="card-kicker" href="https://www.instagram.com/redbiosferaurbana/reel/DW4wpxDDtob/" target="_blank" rel="noopener">Inundaciones en el camino a Santa Bárbara</a>\n            <p class="card-body">La pérdida de cobertura vegetal y el crecimiento urbano sin planificación agravan el impacto de las tormentas.</p>\n            <span class="card-meta">8 de abril de 2026 · Territorio</span>', 1)
+        html = html.replace(
+            '<span class="card-kicker">Título de la novedad</span>\n            <p class="card-body">Espacio reservado para la tercera nota.</p>\n            <span class="card-meta">Fecha · Categoría</span>',
+            '<a class="card-kicker" href="https://online.fliphtml5.com/moahu/zunn/index.html" target="_blank" rel="noopener">Informe Santa Bárbara</a>\n            <p class="card-body">Consultá el informe territorial disponible desde el canal oficial de Biosfera Urbana.</p>\n            <span class="card-meta">Documento · Linktree oficial</span>', 1)
+        html = html.replace(
+            '<div class="nota-pendiente">\n          <p style="font-size:14px;line-height:1.6;margin:0;padding:14px 18px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800);width:fit-content;max-width:100%">Pendiente: textos, fechas y fotografías reales de novedades.</p>\n        </div>',
+            '')
+        html = html.replace('\n        \n      </section>', '\n      </section>')
     html = wire_forms(html, fname)
     navkeys = {k: "" for k in ACTIVE.values()}
     if fname in ACTIVE:
