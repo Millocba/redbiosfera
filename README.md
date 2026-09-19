@@ -113,7 +113,9 @@ El workflow de `.github/workflows/pages.yml` regenera `public/` y lo publica
 automáticamente en cada push a `main`.
 
 1. Subí el repositorio a GitHub con `git push -u origin main`.
-2. En GitHub, abrí **Settings → Pages** y elegí **GitHub Actions** como origen.
+2. En GitHub, abrí **Settings → Pages**, seleccioná **GitHub Actions** en
+	**Build and deployment → Source** y guardá. Esto habilita Pages una vez;
+	el token del workflow no puede crear ese sitio automáticamente.
 3. Esperá a que termine la acción **Publicar en GitHub Pages**.
 
 La URL será `https://USUARIO.github.io/REPOSITORIO/`. Los formularios quedan en
