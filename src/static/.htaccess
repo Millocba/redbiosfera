@@ -1,0 +1,53 @@
+# Red Biosfera Urbana — configuración Apache para hosting compartido (Hostinger).
+
+# --- URLs sin .html: /contacto en vez de /contacto.html ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Forzar HTTPS (Hostinger emite el certificado gratuito desde hPanel).
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Quitar la extensión visible.
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # Resolver internamente el archivo .html.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# --- Compresión ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Caché del navegador ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType text/css                  "access plus 1 month"
+  ExpiresByType application/javascript    "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 6 months"
+  ExpiresByType font/woff2                "access plus 1 year"
+</IfModule>
+
+# --- Seguridad básica ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# No exponer configuración ni el registro de mensajes.
+<FilesMatch "^(config\.php|.*\.log|.*\.md)$">
+  Require all denied
+</FilesMatch>
+
+Options -Indexes

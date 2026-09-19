@@ -1,0 +1,60 @@
+/* Ajustes del sitio real sobre el mockup: accesibilidad, responsive y estados
+   de formulario. Este archivo NO se regenera: editalo libremente. */
+
+/* — cáscara de página — */
+.pagina { min-height: 100vh; padding: 24px 16px 72px; font-family: var(--font-body); }
+.lamina {
+  max-width: 1280px; margin: 0 auto;
+  background: rgba(255, 255, 255, .44);
+  backdrop-filter: blur(16px) saturate(1.25);
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 32px; overflow: hidden;
+  box-shadow: 0 30px 70px rgba(14, 55, 32, .14);
+}
+
+/* — navegación — */
+.nav a { text-decoration: none; }
+.nav a[aria-current="page"] { color: var(--color-accent-2-900); font-weight: 700; }
+.nav-brand { font-family: var(--font-heading); color: var(--color-text); }
+
+/* — saltar al contenido (teclado / lectores de pantalla) — */
+.saltar {
+  position: absolute; left: -9999px; top: 0; z-index: 99;
+  background: var(--color-accent); color: var(--color-bg);
+  padding: 10px 16px; border-radius: 0 0 var(--radius-md) 0;
+}
+.saltar:focus { left: 0; }
+
+/* — formularios — */
+.trampa-spam { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+textarea.input { resize: vertical; font: inherit; }
+form[data-glass] { width: 100% !important; height: auto !important; }
+form[data-glass] .input { width: 100% !important; max-width: 100% !important; }
+.aviso-enviado[hidden] { display: none; }
+
+/* — notas de contenido pendiente: se ocultan con data-pendientes="off" en <body> — */
+body[data-pendientes="off"] .nota-pendiente { display: none; }
+
+/* — responsive — */
+@media (max-width: 860px) {
+  .pagina { padding: 12px 10px 48px; }
+  .lamina { border-radius: 24px; }
+  .nav { flex-wrap: wrap; row-gap: 8px; }
+  svg[style*="width:100%"] { border-radius: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* — grillas del mockup que necesitan colapsar en pantallas chicas — */
+@media (max-width: 860px) {
+  [style*="grid-template-columns:minmax(0,5fr)"],
+  [style*="grid-template-columns: minmax(0,5fr)"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"] {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+  }
+  [style*="max-width:62ch"], [style*="max-width:52ch"] { max-width: 100% !important; }
+}

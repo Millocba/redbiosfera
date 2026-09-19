@@ -1,0 +1,21 @@
+# Configuración con datos reales del servidor
+public/config.php
+
+# Registro de mensajes generado por enviar.php
+public/*.log
+
+# Paquete de despliegue
+dist/
+
+# Sistema operativo / editores
+Thumbs.db
+Desktop.ini
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Temporales
+*.bak
+*.tmp
+*~

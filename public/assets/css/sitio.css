@@ -1,0 +1,71 @@
+/* Paleta tomada del póster "Ciencia y Territorio": verde bosque, verde menta,
+   olivo/tierra, teal de agua y fondo hielo. Se reescriben los tokens del
+   sistema, así los componentes heredan la paleta con sus estados. */
+:root {
+  --color-bg: #eff7f4;
+  --color-text: #1b2420;
+  --color-accent: #1e6b2b;
+  --color-surface: #e2efe6;
+  --color-neutral-100: #eef5f1; --color-neutral-200: #e0ebe4; --color-neutral-300: #c9d8ce;
+  --color-neutral-400: #a8b9ae; --color-neutral-500: #8b9c92; --color-neutral-600: #6e7e75;
+  --color-neutral-700: #55635b; --color-neutral-800: #3b4741; --color-neutral-900: #232c27;
+  --color-accent-100: #e6f3e0; --color-accent-200: #c8dfb2; --color-accent-300: #a5cf96;
+  --color-accent-400: #57a04c; --color-accent-500: #1e6b2b; --color-accent-600: #175824;
+  --color-accent-700: #12471d; --color-accent-800: #0e3716; --color-accent-900: #09240f;
+  --color-accent-2: #6f8a52;
+  --color-accent-2-100: #eef3e6; --color-accent-2-200: #dbe7c9; --color-accent-2-300: #bfd0a4;
+  --color-accent-2-400: #98ac7a; --color-accent-2-500: #6f8a52; --color-accent-2-600: #5c7343;
+  --color-accent-2-700: #495c35; --color-accent-2-800: #374528; --color-accent-2-900: #232e1a;
+  --rbu-teal: #5c8a90; --rbu-teal-ink: #35646a; --rbu-teal-light: #bcd8da; --rbu-earth: #7a6044; --rbu-earth-light: #cbb89f;
+  --rbu-sky: #dcecee; --rbu-stone: #9aa5a3;
+}
+body {
+  margin: 0; text-wrap: pretty;
+  background:
+    radial-gradient(56rem 34rem at 12% -6%, #bfe6d2 0%, transparent 62%),
+    radial-gradient(48rem 30rem at 92% 8%, #cfe8b8 0%, transparent 58%),
+    radial-gradient(52rem 36rem at 70% 96%, #bcd8da 0%, transparent 60%),
+    #eef5f1;
+  background-attachment: fixed;
+}
+/* Capa de vidrio: superficies translúcidas con desenfoque sobre el fondo de color */
+.card, .input, .seg, .table tbody tr, .nav {
+  backdrop-filter: blur(16px) saturate(1.25);
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+}
+.card {
+  background: rgba(255,255,255,.52);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: 0 14px 34px rgba(14,55,32,.10);
+}
+.input { background: rgba(255,255,255,.62); border-color: rgba(14,55,32,.16); }
+.seg { background: rgba(255,255,255,.5); }
+.nav { background: rgba(255,255,255,.58); border-bottom: 1px solid rgba(255,255,255,.7); }
+.tag { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+/* Vidrio UI: canto luminoso, marcas de esquina y destello diagonal */
+[data-glass], .card { position: relative; isolation: isolate; box-shadow: inset 0 0 0 1px rgba(255,255,255,.45), 0 14px 34px rgba(14,55,32,.10); }
+[data-glass] > *, .card > * { position: relative; z-index: 1; }
+[data-glass]::before, .card::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;
+  background: linear-gradient(112deg, rgba(255,255,255,.6) 0 6%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 66%, rgba(255,255,255,.34) 80%, rgba(255,255,255,0) 94%);
+}
+[data-glass]::after {
+  content: ""; position: absolute; inset: 9px; pointer-events: none; z-index: 0;
+  --edge: rgba(18,71,29,.34);
+  background:
+    linear-gradient(var(--edge), var(--edge)) left top/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) left top/1.5px 24px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right top/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right top/1.5px 24px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) left bottom/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) left bottom/1.5px 24px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right bottom/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right bottom/1.5px 24px no-repeat,
+    radial-gradient(circle, var(--edge) 0 2px, transparent 2.5px) left 34px top -2px/5px 5px no-repeat,
+    radial-gradient(circle, var(--edge) 0 2px, transparent 2.5px) left 46px top -2px/5px 5px no-repeat,
+    radial-gradient(circle, var(--edge) 0 2px, transparent 2.5px) right 34px bottom -2px/5px 5px no-repeat;
+}
+.tag::before, .tag::after, .btn::before, .btn::after { content: none; }
+
+a { color: var(--color-accent-2-800); text-underline-offset: 3px; }
+a:hover { color: var(--color-accent-2-900); }

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="c4b26adb-cb67-46f4-b57b-762058ff0c09"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* Organic — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
+/* latin-ext */
+@font-face {
+  font-family: 'Caprasimo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("82408e76-19eb-4cea-9a3c-2dab6f0f6c50") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caprasimo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("4c7e1e24-cc6b-494c-9ad5-1e4c7ac24185") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8b90a54e-408c-4e34-acbb-8eceef8a5239") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("5e3700e5-2386-426d-82ff-527c7d1dff9f") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("8b90a54e-408c-4e34-acbb-8eceef8a5239") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("5e3700e5-2386-426d-82ff-527c7d1dff9f") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("8b90a54e-408c-4e34-acbb-8eceef8a5239") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("5e3700e5-2386-426d-82ff-527c7d1dff9f") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+:root {
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-text: #201e1d;
+  --color-accent: #c67139;
+  --color-accent-2: #7a8a5e;
+  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+
+  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
+     same step of any role matches the others in visual value. */
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-neutral-400: #c0b6a5;
+  --color-neutral-500: #a19786;
+  --color-neutral-600: #82796a;
+  --color-neutral-700: #645c50;
+  --color-neutral-800: #474238;
+  --color-neutral-900: #2e2b25;
+
+  --color-accent-100: #fff2eb;
+  --color-accent-200: #ffe1d0;
+  --color-accent-300: #ffc6a5;
+  --color-accent-400: #f6a06b;
+  --color-accent-500: #d67f48;
+  --color-accent-600: #b2622d;
+  --color-accent-700: #8c491a;
+  --color-accent-800: #643312;
+  --color-accent-900: #402310;
+
+  --color-accent-2-100: #f0fae1;
+  --color-accent-2-200: #e1eecc;
+  --color-accent-2-300: #ccdbb2;
+  --color-accent-2-400: #aebf92;
+  --color-accent-2-500: #8fa073;
+  --color-accent-2-600: #728157;
+  --color-accent-2-700: #56633f;
+  --color-accent-2-800: #3d472b;
+  --color-accent-2-900: #272e1b;
+
+  --font-heading: "Caprasimo", system-ui, sans-serif;
+  --font-heading-weight: 400;
+  --font-body: "Figtree", system-ui, sans-serif;
+
+  --space-1: 4.4px;
+  --space-2: 8.8px;
+  --space-3: 13.2px;
+  --space-4: 17.6px;
+  --space-6: 26.4px;
+  --space-8: 35.2px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Elevation — derived from the ground: soft ink-tinted shadows on a
+     light theme, a hairline edge + ambient darkness on a dark one. */
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+
+.washed{filter:saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94)}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Components — built with the tokens above. Plain CSS
+   on plain HTML: no JavaScript, no build step. Each class is documented in
+   readme.md and demonstrated in foundations/ and components/.
+   ══════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+h6 { letter-spacing: 0.08em; text-transform: uppercase; }
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px; margin-top: var(--space-1);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* — rules — */
+.hr {
+  height: 1px; border: 0; margin: var(--space-4) 0;
+  background: var(--color-divider);
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; line-height: 1.2; color: var(--color-text); /* matches the .input's 14px —
+     the pair sits side by side in sign-up rows */
+  background: transparent; border: 1px solid transparent;
+  padding: var(--space-2) calc(var(--space-3) * 1.2);
+  border-radius: var(--radius-md);
+}
+.btn svg { display: block; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-bg); }
+.btn-primary:hover { background: var(--color-accent-600); }
+.btn-primary:active { background: var(--color-accent-700); }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.btn-icon { width: 36px; height: 36px; padding: 0; }
+.btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* — forms — */
+.field > label {
+  display: block; font-size: 12px; margin-bottom: 5px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+.input {
+  width: 100%; min-height: 36px; padding: 6px 10px; font: inherit;
+  font-size: 14px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.input:hover { border-color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+textarea.input { min-height: 90px; resize: vertical; }
+.radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.radio input, .seg-opt input {
+  position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.radio .dot {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  border: 1.5px solid var(--color-divider);
+}
+.radio:hover .dot { border-color: var(--color-accent); }
+.radio input:checked + .dot {
+  border-color: var(--color-accent); background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+.radio input:focus-visible + .dot { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.seg {
+  display: inline-flex; overflow: hidden;
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.seg-opt {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; font-size: 13px; cursor: pointer;
+}
+.seg-opt + .seg-opt { border-left: 1px solid var(--color-divider); }
+.seg-opt:has(input:checked) { background: var(--color-accent); color: var(--color-bg); }
+.seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.seg-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+
+/* — cards — */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
+}
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 17px; line-height: 1.2;
+}
+.card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
+.card-meta {
+  display: flex; align-items: center; gap: 6px; font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.elev-sm { box-shadow: var(--shadow-sm); }
+.elev-md { box-shadow: var(--shadow-md); }
+.elev-lg { box-shadow: var(--shadow-lg); }
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px;
+  letter-spacing: 0.02em; padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
+.tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+.tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+
+/* — navigation — */
+.nav {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: none;
+}
+.nav-brand {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 18px; margin-right: auto;
+}
+.nav a { color: inherit; text-decoration: none; font-size: 14px; }
+.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+
+/* — tables — */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2); border-bottom: 1px solid var(--color-divider);
+}
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+
+/* — dialog — */
+.dialog-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
+}
+.dialog {
+  width: min(440px, 100%); display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-lg);
+}
+.dialog-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px;
+}
+.dialog-body { font-size: 14px; opacity: 0.85; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* — rounded frame: everything softens, small controls go pill — */
+.card, .dialog { border-radius: calc(var(--radius-lg) * 1.15); }
+.btn, .tag, .seg, .input { border-radius: 999px; }
+.input { padding-inline: 14px; }
+
+</style>
+<script src="38eb3f2c-afb6-46b2-947d-2f73dab50e79"></script>
+<script src="d77f5ee7-15bb-49b9-8173-dae8691be962"></script>
+<style>
+/* Paleta tomada del póster "Ciencia y Territorio": verde bosque, verde menta,
+   olivo/tierra, teal de agua y fondo hielo. Se reescriben los tokens del
+   sistema, así los componentes heredan la paleta con sus estados. */
+:root {
+  --color-bg: #eff7f4;
+  --color-text: #1b2420;
+  --color-accent: #1e6b2b;
+  --color-surface: #e2efe6;
+  --color-neutral-100: #eef5f1; --color-neutral-200: #e0ebe4; --color-neutral-300: #c9d8ce;
+  --color-neutral-400: #a8b9ae; --color-neutral-500: #8b9c92; --color-neutral-600: #6e7e75;
+  --color-neutral-700: #55635b; --color-neutral-800: #3b4741; --color-neutral-900: #232c27;
+  --color-accent-100: #e6f3e0; --color-accent-200: #c8dfb2; --color-accent-300: #a5cf96;
+  --color-accent-400: #57a04c; --color-accent-500: #1e6b2b; --color-accent-600: #175824;
+  --color-accent-700: #12471d; --color-accent-800: #0e3716; --color-accent-900: #09240f;
+  --color-accent-2: #6f8a52;
+  --color-accent-2-100: #eef3e6; --color-accent-2-200: #dbe7c9; --color-accent-2-300: #bfd0a4;
+  --color-accent-2-400: #98ac7a; --color-accent-2-500: #6f8a52; --color-accent-2-600: #5c7343;
+  --color-accent-2-700: #495c35; --color-accent-2-800: #374528; --color-accent-2-900: #232e1a;
+  --rbu-teal: #5c8a90; --rbu-teal-ink: #35646a; --rbu-teal-light: #bcd8da; --rbu-earth: #7a6044; --rbu-earth-light: #cbb89f;
+  --rbu-sky: #dcecee; --rbu-stone: #9aa5a3;
+}
+body {
+  margin: 0; text-wrap: pretty;
+  background:
+    radial-gradient(56rem 34rem at 12% -6%, #bfe6d2 0%, transparent 62%),
+    radial-gradient(48rem 30rem at 92% 8%, #cfe8b8 0%, transparent 58%),
+    radial-gradient(52rem 36rem at 70% 96%, #bcd8da 0%, transparent 60%),
+    #eef5f1;
+  background-attachment: fixed;
+}
+/* Capa de vidrio: superficies translúcidas con desenfoque sobre el fondo de color */
+.card, .input, .seg, .table tbody tr, .nav {
+  backdrop-filter: blur(16px) saturate(1.25);
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+}
+.card {
+  background: rgba(255,255,255,.52);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: 0 14px 34px rgba(14,55,32,.10);
+}
+.input { background: rgba(255,255,255,.62); border-color: rgba(14,55,32,.16); }
+.seg { background: rgba(255,255,255,.5); }
+.nav { background: rgba(255,255,255,.58); border-bottom: 1px solid rgba(255,255,255,.7); }
+.tag { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+/* Vidrio UI: canto luminoso, marcas de esquina y destello diagonal */
+[data-glass], .card { position: relative; isolation: isolate; box-shadow: inset 0 0 0 1px rgba(255,255,255,.45), 0 14px 34px rgba(14,55,32,.10); }
+[data-glass] > *, .card > * { position: relative; z-index: 1; }
+[data-glass]::before, .card::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;
+  background: linear-gradient(112deg, rgba(255,255,255,.6) 0 6%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 66%, rgba(255,255,255,.34) 80%, rgba(255,255,255,0) 94%);
+}
+[data-glass]::after {
+  content: ""; position: absolute; inset: 9px; pointer-events: none; z-index: 0;
+  --edge: rgba(18,71,29,.34);
+  background:
+    linear-gradient(var(--edge), var(--edge)) left top/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) left top/1.5px 24px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right top/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right top/1.5px 24px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) left bottom/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) left bottom/1.5px 24px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right bottom/24px 1.5px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) right bottom/1.5px 24px no-repeat,
+    radial-gradient(circle, var(--edge) 0 2px, transparent 2.5px) left 34px top -2px/5px 5px no-repeat,
+    radial-gradient(circle, var(--edge) 0 2px, transparent 2.5px) left 46px top -2px/5px 5px no-repeat,
+    radial-gradient(circle, var(--edge) 0 2px, transparent 2.5px) right 34px bottom -2px/5px 5px no-repeat;
+}
+.tag::before, .tag::after, .btn::before, .btn::after { content: none; }
+
+a { color: var(--color-accent-2-800); text-underline-offset: 3px; }
+a:hover { color: var(--color-accent-2-900); }
+</style>
+</helmet>
+
+<div style="min-height:100vh;padding:24px 16px 72px;font-family:var(--font-body)">
+
+  <div style="max-width:1280px;margin:0 auto 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <span style="font-family:var(--font-heading);font-size:20px;line-height:1.1">Red Biosfera Urbana</span>
+      <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-2-800)">Mockups · v4 · vidrio</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goInicio }}">Inicio</button>
+      <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goInstitucional }}">Institucional</button>
+      <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goProyectos }}">Proyectos</button>
+      <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goParticipar }}">Participar</button>
+      <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goContacto }}">Contacto</button>
+      <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goMovil }}">Móvil</button>
+    </div>
+  </div>
+
+  <div data-glass="" style="max-width:1280px;margin:0 auto;background:rgba(255,255,255,.44);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.7);border-radius:32px;overflow:hidden;box-shadow:0 30px 70px rgba(14,55,32,.14)">
+
+    <nav class="nav" style="padding-inline:clamp(20px,4vw,56px)">
+      <span class="nav-brand">Red Biosfera Urbana</span>
+      <a href="#institucional">Institucional</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#participar">Participar</a>
+      <a href="#contacto">Contacto</a>
+      <button type="button" class="btn btn-primary">Donar</button>
+    </nav>
+
+    <sc-if value="{{ isInicio }}" hint-placeholder-val="{{ true }}">
+    <div>
+
+      <section style="position:relative;padding:clamp(32px,4vw,64px) clamp(24px,4vw,56px) clamp(24px,3vw,40px);overflow:clip">
+        <div style="display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
+          <div style="display:flex;flex-direction:column;gap:22px;max-width:62ch">
+            <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-2-800)">Educación ambiental e inteligencia territorial · Córdoba</span>
+            <h1 style="font-family:var(--font-heading);font-size:clamp(38px,5vw,68px);line-height:1.08;margin:0;margin-left:-.028em;color:var(--color-accent-2-900)">Ciencia ciudadana<br>para la ciudad<br>que habitamos.</h1>
+            <p style="font-size:18px;line-height:1.7;margin:0;max-width:52ch">Medimos agua, suelo, aire y vegetación con las escuelas y el barrio. Los datos no quedan en el aula: fundamentan reforestación, corredores biológicos y huertas.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px">
+              <button type="button" class="btn btn-primary" sc-camel-on-click="{{ goInstitucional }}">Conocer la Red</button>
+              <button type="button" class="btn btn-secondary" sc-camel-on-click="{{ goParticipar }}">Sumarme como voluntario/a</button>
+              <button type="button" class="btn btn-ghost" sc-camel-on-click="{{ goParticipar }}">Colaborar con una donación</button>
+            </div>
+          </div>
+
+          <svg sc-camel-view-box="0 0 1000 520" role="img" aria-label="Corte del territorio urbano: atmósfera, biosfera, hidrosfera y litosfera, con los instrumentos de medición de cada capa" style="width:100%;height:auto;border-radius:32px;display:block">
+            <defs>
+              <linearGradient id="rbu3-sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" style="stop-color:var(--rbu-sky)"></stop>
+                <stop offset="1" style="stop-color:#f0f6f2"></stop>
+              </linearGradient>
+              <pattern id="rbu3-loess" width="26" height="26" sc-camel-pattern-units="userSpaceOnUse">
+                <circle cx="6" cy="7" r="2.4" style="fill:#ffffff;opacity:.5"></circle>
+                <circle cx="19" cy="18" r="1.8" style="fill:#ffffff;opacity:.38"></circle>
+              </pattern>
+              <pattern id="rbu3-rock" width="34" height="24" sc-camel-pattern-units="userSpaceOnUse">
+                <path d="M0 18h34M8 6h18" style="stroke:#ffffff;opacity:.22;stroke-width:3;stroke-linecap:round"></path>
+              </pattern>
+              <clipPath id="rbu3-frame"><rect x="0" y="0" width="1000" height="520" rx="32"></rect></clipPath>
+            </defs>
+
+            <g clip-path="url(#rbu3-frame)">
+              <rect x="0" y="0" width="1000" height="520" fill="url(#rbu3-sky)"></rect>
+
+              <g style="opacity:.85">
+                <circle cx="150" cy="86" r="30" fill="#ffffff"></circle>
+                <circle cx="190" cy="86" r="40" fill="#ffffff"></circle>
+                <circle cx="236" cy="92" r="26" fill="#ffffff"></circle>
+                <circle cx="742" cy="66" r="24" fill="#ffffff"></circle>
+                <circle cx="776" cy="70" r="34" fill="#ffffff"></circle>
+                <circle cx="814" cy="76" r="22" fill="#ffffff"></circle>
+              </g>
+
+              <g>
+                <rect x="392" y="196" width="66" height="118" rx="12" style="fill:var(--rbu-stone)"></rect>
+                <rect x="470" y="158" width="78" height="156" rx="14" style="fill:#8e9a98"></rect>
+                <rect x="560" y="214" width="58" height="100" rx="12" style="fill:var(--rbu-stone)"></rect>
+                <rect x="630" y="184" width="70" height="130" rx="13" style="fill:#8e9a98"></rect>
+                <g style="fill:var(--rbu-sky);opacity:.75">
+                  <rect x="406" y="214" width="16" height="16" rx="4"></rect><rect x="430" y="214" width="16" height="16" rx="4"></rect>
+                  <rect x="406" y="244" width="16" height="16" rx="4"></rect><rect x="430" y="244" width="16" height="16" rx="4"></rect>
+                  <rect x="486" y="180" width="16" height="16" rx="4"></rect><rect x="512" y="180" width="16" height="16" rx="4"></rect>
+                  <rect x="486" y="212" width="16" height="16" rx="4"></rect><rect x="512" y="212" width="16" height="16" rx="4"></rect>
+                  <rect x="648" y="206" width="16" height="16" rx="4"></rect><rect x="672" y="206" width="16" height="16" rx="4"></rect>
+                </g>
+              </g>
+
+              <g>
+                <rect x="163" y="248" width="14" height="68" rx="7" style="fill:var(--rbu-earth)"></rect>
+                <circle cx="170" cy="228" r="54" style="fill:var(--color-accent-500)"></circle>
+                <circle cx="132" cy="252" r="34" style="fill:var(--color-accent-600)"></circle>
+                <circle cx="210" cy="252" r="30" style="fill:var(--color-accent-400)"></circle>
+                <rect x="855" y="256" width="12" height="60" rx="6" style="fill:var(--rbu-earth)"></rect>
+                <circle cx="861" cy="240" r="44" style="fill:var(--color-accent-400)"></circle>
+                <circle cx="900" cy="262" r="26" style="fill:var(--color-accent-500)"></circle>
+                <rect x="300" y="276" width="10" height="40" rx="5" style="fill:var(--rbu-earth)"></rect>
+                <circle cx="305" cy="266" r="28" style="fill:var(--color-accent-600)"></circle>
+              </g>
+
+              <rect x="0" y="312" width="1000" height="44" style="fill:var(--color-accent-2-400)"></rect>
+              <rect x="0" y="352" width="1000" height="96" style="fill:var(--rbu-earth-light)"></rect>
+              <rect x="0" y="352" width="1000" height="96" fill="url(#rbu3-loess)"></rect>
+              <rect x="0" y="444" width="1000" height="76" style="fill:var(--rbu-earth)"></rect>
+              <rect x="0" y="444" width="1000" height="76" fill="url(#rbu3-rock)"></rect>
+
+              <path d="M0 404c72 0 72-18 144-18s72 18 144 18 72-18 144-18 72 18 144 18 72-18 144-18 72 18 144 18 136-18 136-18" fill="none" style="stroke:var(--rbu-teal);stroke-width:9;stroke-linecap:round"></path>
+
+              <g>
+                <rect x="516" y="96" width="9" height="66" rx="4.5" style="fill:var(--color-accent-800)"></rect>
+                <circle cx="520" cy="92" r="28" style="fill:none;stroke:var(--color-accent-600);stroke-width:4;opacity:.45"></circle>
+                <circle cx="520" cy="92" r="17" style="fill:var(--color-accent-600)"></circle>
+                <circle cx="520" cy="92" r="7" style="fill:var(--color-bg)"></circle>
+              </g>
+
+              <g>
+                <line x1="170" y1="356" x2="170" y2="444" style="stroke:var(--color-accent-900);stroke-width:5;stroke-dasharray:12 10;opacity:.6"></line>
+                <circle cx="170" cy="446" r="13" style="fill:var(--color-accent-900)"></circle>
+              </g>
+
+              <g style="font-family:var(--font-body);font-size:19px;font-weight:700;letter-spacing:.08em">
+                <rect x="28" y="30" width="176" height="42" rx="21" style="fill:var(--color-bg)"></rect>
+                <text x="52" y="58" style="fill:var(--color-accent-800)">ATMÓSFERA</text>
+                <rect x="620" y="30" width="286" height="42" rx="21" style="fill:var(--color-bg);opacity:.85"></rect>
+                <text x="644" y="58" style="fill:var(--rbu-teal-ink);font-weight:600;letter-spacing:.02em">PM2.5 · PM10 · aerosoles</text>
+
+                <rect x="620" y="136" width="286" height="42" rx="21" style="fill:var(--color-bg)"></rect>
+                <text x="644" y="164" style="fill:var(--color-accent-800)">BIOSFERA</text>
+                <text x="790" y="164" style="fill:var(--rbu-teal-ink);font-weight:600;letter-spacing:.02em">savia · Brix</text>
+
+                <rect x="28" y="376" width="196" height="42" rx="21" style="fill:var(--color-bg)"></rect>
+                <text x="52" y="404" style="fill:var(--rbu-teal-ink)">HIDROSFERA</text>
+                <rect x="660" y="376" width="312" height="42" rx="21" style="fill:var(--color-bg);opacity:.9"></rect>
+                <text x="684" y="404" style="fill:var(--rbu-teal-ink);font-weight:600;letter-spacing:.02em">pH · conductividad · TDS</text>
+
+                <rect x="28" y="458" width="182" height="42" rx="21" style="fill:var(--color-bg)"></rect>
+                <text x="52" y="486" style="fill:var(--rbu-earth)">LITOSFERA</text>
+                <rect x="632" y="458" width="340" height="42" rx="21" style="fill:var(--color-bg);opacity:.9"></rect>
+                <text x="656" y="486" style="fill:var(--rbu-earth);font-weight:600;letter-spacing:.02em">granulometría · magnetismo</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section style="padding:24px clamp(24px,4vw,56px);display:flex;flex-wrap:wrap;gap:10px">
+        <span class="tag tag-accent-2">Innovación Educativa · Min. Educación Pcia. de Córdoba · 2024 y 2025</span>
+        <span class="tag tag-accent-2">Beneplácito Municipal · Concejo Deliberante Córdoba · 2024</span>
+        <span class="tag tag-accent">Certamen Nacional “Cuidamos nuestra Casa Común” · UCC · 2025</span>
+      </section>
+
+      <section style="padding:clamp(32px,4vw,56px) clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:28px">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:60ch">
+          <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Qué medimos</span>
+          <h2 style="font-family:var(--font-heading);font-size:clamp(28px,3.2vw,38px);line-height:1.15;margin:0">Un corte del territorio, esfera por esfera</h2>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;border-radius:32px;overflow:hidden">
+          <div data-glass="" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:color-mix(in srgb,var(--color-accent-2-200) 62%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);padding:22px clamp(20px,3vw,32px);border-radius:28px">
+            <svg width="34" height="34" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-accent-2-900);flex:none" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 0 0 0-9h-1.2A6 6 0 0 0 4.7 12.3 3.5 3.5 0 0 0 6 19z"></path></svg>
+            <div style="min-width:180px;flex:1 1 180px"><span style="font-family:var(--font-heading);font-size:22px">Atmósfera</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Sensores de calidad del aire: PM2.5, PM10 y aerosoles AOD (Google Earth Engine).</p></div>
+            <span class="tag tag-outline" style="background:var(--color-bg);color:var(--color-accent-800);border-color:transparent">Sensores IoT</span>
+          </div>
+          <div data-glass="" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:color-mix(in srgb,var(--color-accent-2-300) 58%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);padding:22px clamp(20px,3vw,32px);border-radius:28px">
+            <svg width="34" height="34" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-accent-2-900);flex:none" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-3 16-9 16Z"></path><path d="M4 21c2.5-5.5 6.5-8.5 11-10.5"></path></svg>
+            <div style="min-width:180px;flex:1 1 180px"><span style="font-family:var(--font-heading);font-size:22px">Biosfera</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Fisiología vegetal: savia foliar, grados Brix, pachímetro y cromatografía en papel.</p></div>
+            <span class="tag tag-outline" style="background:var(--color-bg);color:var(--color-accent-800);border-color:transparent">Laboratorio</span>
+          </div>
+          <div data-glass="" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:color-mix(in srgb,var(--color-accent-2-400) 50%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);padding:22px clamp(20px,3vw,32px);border-radius:28px">
+            <svg width="34" height="34" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-accent-2-900);flex:none" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7Z"></path></svg>
+            <div style="min-width:180px;flex:1 1 180px"><span style="font-family:var(--font-heading);font-size:22px">Hidrosfera</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Análisis químico: fosfatos y nitratos, pH, conductividad, TDS y biomicroscopía.</p></div>
+            <span class="tag tag-outline" style="background:var(--color-bg);color:var(--color-accent-800);border-color:transparent">Muestreo</span>
+          </div>
+          <div data-glass="" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:color-mix(in srgb,var(--color-accent-300) 55%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);padding:22px clamp(20px,3vw,32px);border-radius:28px">
+            <svg width="34" height="34" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-accent-900);flex:none" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></svg>
+            <div style="min-width:180px;flex:1 1 180px"><span style="font-family:var(--font-heading);font-size:22px">Litosfera</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Granulometría y magnetismo: tamices N.º 4 a 200, hidrómetro de Bouyoucos, magnetómetro Arduino.</p></div>
+            <span class="tag tag-outline" style="background:var(--color-bg);color:var(--color-accent-800);border-color:transparent">Suelo</span>
+          </div>
+        </div>
+      </section>
+
+      <section data-glass="" style="padding:clamp(32px,4vw,56px) clamp(24px,4vw,56px);background:rgba(255,255,255,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25)">
+        <div style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center">
+          <svg sc-camel-view-box="0 0 360 360" role="img" aria-label="Ciclo pedagógico de cuatro fases" style="width:100%;height:auto;max-width:360px;justify-self:center">
+            <defs>
+              <marker id="rbu-arrow" sc-camel-view-box="0 0 10 10" sc-camel-ref-x="6" sc-camel-ref-y="5" sc-camel-marker-width="4.2" sc-camel-marker-height="4.2" orient="auto-start-reverse">
+                <path d="M0 0 10 5 0 10z" style="fill:var(--color-accent-2-600)"></path>
+              </marker>
+              <marker id="rbu-arrow-b" sc-camel-view-box="0 0 10 10" sc-camel-ref-x="6" sc-camel-ref-y="5" sc-camel-marker-width="4.2" sc-camel-marker-height="4.2" orient="auto-start-reverse">
+                <path d="M0 0 10 5 0 10z" style="fill:var(--color-accent-500)"></path>
+              </marker>
+            </defs>
+            <circle cx="180" cy="180" r="84" style="fill:var(--color-accent-2-200)"></circle>
+            <text x="180" y="168" text-anchor="middle" style="font-family:var(--font-heading);font-size:20px;fill:var(--color-accent-2-900)">Ciclo</text>
+            <text x="180" y="196" text-anchor="middle" style="font-family:var(--font-heading);font-size:20px;fill:var(--color-accent-2-900)">pedagógico</text>
+            <path d="M180 48a132 132 0 0 1 124 88" fill="none" stroke-linecap="round" stroke-width="22" marker-end="url(#rbu-arrow)" style="stroke:var(--color-accent-2-600)"></path>
+            <path d="M310 190a132 132 0 0 1-84 114" fill="none" stroke-linecap="round" stroke-width="22" marker-end="url(#rbu-arrow-b)" style="stroke:var(--color-accent-500)"></path>
+            <path d="M172 312a132 132 0 0 1-118-92" fill="none" stroke-linecap="round" stroke-width="22" marker-end="url(#rbu-arrow)" style="stroke:var(--color-accent-2-600)"></path>
+            <path d="M52 168a132 132 0 0 1 92-114" fill="none" stroke-linecap="round" stroke-width="22" marker-end="url(#rbu-arrow-b)" style="stroke:var(--color-accent-500)"></path>
+            <g style="fill:none;stroke:var(--color-accent-800);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round">
+              <circle cx="152" cy="50" r="30" style="fill:var(--color-bg);stroke:none"></circle>
+              <g transform="translate(140,38)"><path d="M3 6 9 3l6 3 6-3v15l-6 3-6-3-6 3z"></path><path d="M9 3v15M15 6v15"></path></g>
+              <circle cx="308" cy="150" r="30" style="fill:var(--color-bg);stroke:none"></circle>
+              <g transform="translate(296,138)"><path d="M12 20v-6"></path><circle cx="12" cy="10" r="3"></circle><path d="M5.6 16.4a9 9 0 0 1 0-12.7M18.4 3.7a9 9 0 0 1 0 12.7"></path><path d="M8.5 13.5a5 5 0 0 1 0-7M15.5 6.5a5 5 0 0 1 0 7"></path></g>
+              <circle cx="212" cy="308" r="30" style="fill:var(--color-bg);stroke:none"></circle>
+              <g transform="translate(200,296)"><path d="M9 2v6.5L4 18a2.5 2.5 0 0 0 2.2 3.7h11.6A2.5 2.5 0 0 0 20 18l-5-9.5V2"></path><path d="M7.5 2h9M6.5 14h11"></path></g>
+              <circle cx="52" cy="202" r="30" style="fill:var(--color-bg);stroke:none"></circle>
+              <g transform="translate(40,190)"><path d="M12 21c0-5 2-9 8-11"></path><path d="M12 21C12 13 8 9 3 8c0 6 3 10 9 11Z"></path><path d="M12 14c0-4 3-7 8-7 0 4-3 7-8 7Z"></path></g>
+            </g>
+          </svg>
+
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Metodología</span>
+            <h2 style="font-family:var(--font-heading);font-size:clamp(28px,3.2vw,38px);line-height:1.15;margin:0">De la teoría a la acción</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+              <div style="display:flex;gap:14px;align-items:flex-start"><span style="flex:none;display:grid;place-content:center;width:38px;height:38px;border-radius:50%;background:var(--color-accent-2-300);font-family:var(--font-heading);font-size:17px;color:var(--color-accent-2-900)">1</span><div><span style="font-family:var(--font-heading);font-size:18px">Diagnóstico espacial</span><p style="margin:2px 0 0;font-size:15px;line-height:1.6">Palimpsestos y fotogrametría para leer la memoria del paisaje.</p></div></div>
+              <div style="display:flex;gap:14px;align-items:flex-start"><span style="flex:none;display:grid;place-content:center;width:38px;height:38px;border-radius:50%;background:var(--color-accent-200);font-family:var(--font-heading);font-size:17px;color:var(--color-accent-900)">2</span><div><span style="font-family:var(--font-heading);font-size:18px">Monitoreo tecnológico</span><p style="margin:2px 0 0;font-size:15px;line-height:1.6">Sensores IoT (Arduino) y mapeo digital (QGIS) para datos invisibles.</p></div></div>
+              <div style="display:flex;gap:14px;align-items:flex-start"><span style="flex:none;display:grid;place-content:center;width:38px;height:38px;border-radius:50%;background:var(--color-accent-2-300);font-family:var(--font-heading);font-size:17px;color:var(--color-accent-2-900)">3</span><div><span style="font-family:var(--font-heading);font-size:18px">Validación científica</span><p style="margin:2px 0 0;font-size:15px;line-height:1.6">Ensayos de laboratorio e integración de saberes con expertos.</p></div></div>
+              <div style="display:flex;gap:14px;align-items:flex-start"><span style="flex:none;display:grid;place-content:center;width:38px;height:38px;border-radius:50%;background:var(--color-accent-200);font-family:var(--font-heading);font-size:17px;color:var(--color-accent-900)">4</span><div><span style="font-family:var(--font-heading);font-size:18px">Restauración socioterritorial</span><p style="margin:2px 0 0;font-size:15px;line-height:1.6">Reforestación, huertas y devolución comunitaria. El ciclo se reinicia.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding:clamp(32px,4vw,56px) clamp(24px,4vw,56px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,64px);align-items:center">
+        <figure class="washed" style="margin:0;border-radius:32px;overflow:hidden">
+          <image-slot id="rbu2-aula" shape="rect" style="width:100%;aspect-ratio:4/3" placeholder="Foto: estudiantes en trabajo de campo"></image-slot>
+        </figure>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">El aula viva</span>
+          <h2 style="font-family:var(--font-heading);font-size:clamp(28px,3.2vw,38px);line-height:1.15;margin:0">Triple impacto</h2>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:520px">
+            <div style="aspect-ratio:1;border-radius:50%;background:color-mix(in srgb,var(--color-accent-2-300) 58%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);display:grid;place-content:center;text-align:center;padding:12px"><span style="font-family:var(--font-heading);font-size:clamp(15px,1.7vw,20px);color:var(--color-accent-2-900)">Ambiental</span></div>
+            <div style="aspect-ratio:1;border-radius:50%;background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);display:grid;place-content:center;text-align:center;padding:12px"><span style="font-family:var(--font-heading);font-size:clamp(15px,1.7vw,20px);color:var(--color-accent-2-900)">Científico</span></div>
+            <div style="aspect-ratio:1;border-radius:50%;background:color-mix(in srgb,var(--color-accent-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);display:grid;place-content:center;text-align:center;padding:12px"><span style="font-family:var(--font-heading);font-size:clamp(15px,1.7vw,20px);color:var(--color-accent-900)">Social</span></div>
+          </div>
+          <p style="font-size:16px;line-height:1.7;margin:0;max-width:52ch">Los estudiantes generan datos científicos locales inéditos y los traducen en narrativas accesibles para el barrio.</p>
+        </div>
+      </section>
+
+      <section id="novedades" style="padding:clamp(32px,4vw,56px) clamp(24px,4vw,56px);background:rgba(255,255,255,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:end;justify-content:space-between">
+          <h2 style="font-family:var(--font-heading);font-size:clamp(28px,3.2vw,38px);line-height:1.2;margin:0">Novedades y actividades</h2>
+          <button type="button" class="btn btn-ghost">Ver todas</button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+          <article class="card" style="display:flex;flex-direction:column;gap:12px">
+            <div class="washed" style="border-radius:20px;overflow:hidden"><image-slot id="rbu2-news-1" shape="rect" style="width:100%;aspect-ratio:3/2" placeholder="Foto de la actividad"></image-slot></div>
+            <span class="card-kicker">Título de la novedad</span>
+            <p class="card-body">Espacio reservado para la primera nota.</p>
+            <span class="card-meta">Fecha · Categoría</span>
+          </article>
+          <article class="card" style="display:flex;flex-direction:column;gap:12px">
+            <div class="washed" style="border-radius:20px;overflow:hidden"><image-slot id="rbu2-news-2" shape="rect" style="width:100%;aspect-ratio:3/2" placeholder="Foto de la actividad"></image-slot></div>
+            <span class="card-kicker">Título de la novedad</span>
+            <p class="card-body">Espacio reservado para la segunda nota.</p>
+            <span class="card-meta">Fecha · Categoría</span>
+          </article>
+          <article class="card" style="display:flex;flex-direction:column;gap:12px">
+            <div class="washed" style="border-radius:20px;overflow:hidden"><image-slot id="rbu2-news-3" shape="rect" style="width:100%;aspect-ratio:3/2" placeholder="Foto de la actividad"></image-slot></div>
+            <span class="card-kicker">Título de la novedad</span>
+            <p class="card-body">Espacio reservado para la tercera nota.</p>
+            <span class="card-meta">Fecha · Categoría</span>
+          </article>
+        </div>
+        <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}">
+          <p style="font-size:14px;line-height:1.6;margin:0;padding:14px 18px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800);width:fit-content;max-width:100%">Pendiente: textos, fechas y fotografías reales de novedades.</p>
+        </sc-if>
+      </section>
+
+      <section style="padding:clamp(24px,3vw,40px) clamp(24px,4vw,56px)">
+        <div style="background:linear-gradient(135deg,rgba(73,92,53,.94),rgba(30,107,43,.90));border-radius:32px;padding:clamp(28px,4vw,56px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 22px 48px rgba(14,55,32,.20);display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:center">
+          <div style="display:flex;flex-direction:column;gap:12px;max-width:52ch">
+            <h3 style="font-family:var(--font-heading);font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0;color:var(--color-bg)">Sumate a la Red</h3>
+            <p style="font-size:17px;line-height:1.7;margin:0;color:var(--color-bg)">Colaborá con tu tiempo en las salidas de campo y talleres, o sostené el trabajo con una donación.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <button type="button" class="btn btn-primary" sc-camel-on-click="{{ goParticipar }}">Quiero ser voluntario/a</button>
+            <button type="button" class="btn btn-secondary" style="background:var(--color-bg);color:var(--color-accent-800);border-color:transparent" sc-camel-on-click="{{ goParticipar }}">Quiero donar</button>
+          </div>
+        </div>
+      </section>
+
+      <footer style="padding:24px clamp(24px,4vw,56px) 40px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-size:14px;line-height:1.7;color:var(--color-neutral-700)">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="font-family:var(--font-heading);font-size:18px;color:var(--color-text)">Red Biosfera Urbana</span>
+          <span>Córdoba, Argentina</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="font-weight:600;color:var(--color-text)">Contacto</span>
+          <a href="mailto:red.biosferaurbana@gmail.com">red.biosferaurbana@gmail.com</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="font-weight:600;color:var(--color-text)">Secciones</span>
+          <a href="#institucional">Institucional</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#participar">Participar</a>
+        </div>
+      </footer>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isInstitucional }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:56px">
+      <section style="display:flex;flex-direction:column;gap:20px;max-width:900px">
+        <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Institucional</span>
+        <h1 style="font-family:var(--font-heading);font-size:clamp(36px,4.6vw,58px);line-height:1.1;margin:0;margin-left:-.028em;color:var(--color-accent-2-900)">Quiénes somos</h1>
+        <p style="font-size:18px;line-height:1.7;margin:0;max-width:62ch">Frente a la expansión inmobiliaria desordenada, la segregación socioespacial, la deforestación y la acumulación de residuos que se concretan en Córdoba, analizamos la realidad local desde la teoría de los sistemas complejos: las dinámicas de la sociedad y la naturaleza son interdependientes.</p>
+      </section>
+
+      <section style="display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);align-items:center">
+        <svg sc-camel-view-box="0 0 400 360" role="img" aria-label="Diagrama: geografía crítica, objetividad situada y traducción ecológica convergen en inteligencia territorial" style="width:100%;height:auto">
+          <g style="mix-blend-mode:multiply">
+            <circle cx="140" cy="140" r="112" style="fill:var(--color-accent-2-300);opacity:.85"></circle>
+            <circle cx="262" cy="140" r="112" style="fill:var(--color-accent-300);opacity:.85"></circle>
+            <circle cx="200" cy="244" r="112" style="fill:var(--color-accent-2-400);opacity:.85"></circle>
+          </g>
+          <circle cx="200" cy="176" r="60" style="fill:var(--color-accent-2-900)"></circle>
+          <text x="200" y="166" text-anchor="middle" style="font-family:var(--font-heading);font-size:15px;fill:var(--color-bg)">Inteligencia</text>
+          <text x="200" y="188" text-anchor="middle" style="font-family:var(--font-heading);font-size:15px;fill:var(--color-bg)">territorial</text>
+          <text x="96" y="70" text-anchor="middle" style="font-family:var(--font-body);font-size:14px;font-weight:600;fill:var(--color-accent-2-900)">Geografía</text>
+          <text x="96" y="88" text-anchor="middle" style="font-family:var(--font-body);font-size:14px;font-weight:600;fill:var(--color-accent-2-900)">crítica</text>
+          <text x="306" y="70" text-anchor="middle" style="font-family:var(--font-body);font-size:14px;font-weight:600;fill:var(--color-accent-900)">Objetividad</text>
+          <text x="306" y="88" text-anchor="middle" style="font-family:var(--font-body);font-size:14px;font-weight:600;fill:var(--color-accent-900)">situada</text>
+          <text x="200" y="322" text-anchor="middle" style="font-family:var(--font-body);font-size:14px;font-weight:600;fill:var(--color-accent-2-900)">Traducción ecológica</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <h2 style="font-family:var(--font-heading);font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0">Marco teórico</h2>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div><span style="font-family:var(--font-heading);font-size:19px">Geografía crítica</span><p style="margin:2px 0 0;font-size:15.5px;line-height:1.7">El espacio urbano es una producción social atravesada por desigualdades estructurales. <span style="color:var(--color-neutral-700)">David Harvey</span></p></div>
+            <div><span style="font-family:var(--font-heading);font-size:19px">Objetividad situada</span><p style="margin:2px 0 0;font-size:15.5px;line-height:1.7">Toda medición técnica y uso de instrumentos tiene una responsabilidad ética. <span style="color:var(--color-neutral-700)">Donna Haraway · Bruno Latour</span></p></div>
+            <div><span style="font-family:var(--font-heading);font-size:19px">Traducción ecológica</span><p style="margin:2px 0 0;font-size:15.5px;line-height:1.7">El rigor de los datos se traduce en herramientas comprensibles para los vecinos. <span style="color:var(--color-neutral-700)">Ramon Folch · Pierre Bourdieu</span></p></div>
+          </div>
+        </div>
+      </section>
+
+      <section style="display:flex;flex-direction:column;gap:24px">
+        <h2 style="font-family:var(--font-heading);font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0">Objetivos</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
+          <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-family:var(--font-heading);font-size:20px">Diagnosticar el territorio</span><p style="margin:0;font-size:15.5px;line-height:1.7">Datos ambientales locales sobre agua, suelo, aire y vegetación, cruzados con datos sociales.</p></article>
+          <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-family:var(--font-heading);font-size:20px">Traducir la ciencia</span><p style="margin:0;font-size:15.5px;line-height:1.7">Convertir datos técnicos en herramientas comprensibles y reflexividad crítica para el barrio.</p></article>
+          <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-family:var(--font-heading);font-size:20px">Restaurar el ecosistema</span><p style="margin:0;font-size:15.5px;line-height:1.7">Reforestación con nativas, corredores biológicos y huertas productivas.</p></article>
+          <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-family:var(--font-heading);font-size:20px">Dar agencia a la juventud</span><p style="margin:0;font-size:15.5px;line-height:1.7">Recopilar datos con rigor otorga a las juventudes la agencia política para transformar su ciudad.</p></article>
+        </div>
+      </section>
+
+      <section style="display:flex;flex-direction:column;gap:24px">
+        <h2 style="font-family:var(--font-heading);font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0">Equipo</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px">
+          <div style="display:flex;flex-direction:column;gap:12px"><div class="washed" style="border-radius:999px;overflow:hidden;width:132px;height:132px"><image-slot id="rbu2-team-1" shape="circle" style="width:132px;height:132px" placeholder="Foto"></image-slot></div><span style="font-family:var(--font-heading);font-size:20px">Jonatan Montes</span></div>
+          <div style="display:flex;flex-direction:column;gap:12px"><div class="washed" style="border-radius:999px;overflow:hidden;width:132px;height:132px"><image-slot id="rbu2-team-2" shape="circle" style="width:132px;height:132px" placeholder="Foto"></image-slot></div><span style="font-family:var(--font-heading);font-size:20px">Guadalupe Saldari</span></div>
+          <div style="display:flex;flex-direction:column;gap:12px"><div class="washed" style="border-radius:999px;overflow:hidden;width:132px;height:132px"><image-slot id="rbu2-team-3" shape="circle" style="width:132px;height:132px" placeholder="Foto"></image-slot></div><span style="font-family:var(--font-heading);font-size:20px">Fernanda Utrera</span></div>
+          <div style="display:flex;flex-direction:column;gap:12px"><div class="washed" style="border-radius:999px;overflow:hidden;width:132px;height:132px"><image-slot id="rbu2-team-4" shape="circle" style="width:132px;height:132px" placeholder="Foto"></image-slot></div><span style="font-family:var(--font-heading);font-size:20px">Guillermo Shwindt</span></div>
+        </div>
+        <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}">
+          <p style="font-size:14px;line-height:1.6;margin:0;padding:14px 18px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800);width:fit-content;max-width:100%">Pendiente: roles de cada integrante, resto del equipo, alianzas institucionales y personería jurídica.</p>
+        </sc-if>
+      </section>
+
+      <section style="display:flex;flex-direction:column;gap:20px">
+        <h2 style="font-family:var(--font-heading);font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0">Reconocimientos</h2>
+        <sc-raw-table class="table">
+          <sc-raw-thead><sc-raw-tr><sc-raw-th>Año</sc-raw-th><sc-raw-th>Distinción</sc-raw-th><sc-raw-th>Otorga</sc-raw-th></sc-raw-tr></sc-raw-thead>
+          <sc-raw-tbody>
+            <sc-raw-tr><sc-raw-td>2024 y 2025</sc-raw-td><sc-raw-td>Innovación Educativa</sc-raw-td><sc-raw-td>Ministerio de Educación de la Provincia de Córdoba</sc-raw-td></sc-raw-tr>
+            <sc-raw-tr><sc-raw-td>2024</sc-raw-td><sc-raw-td>Beneplácito Municipal</sc-raw-td><sc-raw-td>Concejo Deliberante de la Ciudad de Córdoba</sc-raw-td></sc-raw-tr>
+            <sc-raw-tr><sc-raw-td>2025</sc-raw-td><sc-raw-td>Certamen Nacional “Cuidamos nuestra Casa Común”</sc-raw-td><sc-raw-td>Universidad Católica de Córdoba</sc-raw-td></sc-raw-tr>
+          </sc-raw-tbody>
+        </sc-raw-table>
+      </section>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isProyectos }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:56px">
+      <section style="display:flex;flex-direction:column;gap:20px;max-width:900px">
+        <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Líneas de trabajo</span>
+        <h1 style="font-family:var(--font-heading);font-size:clamp(36px,4.6vw,58px);line-height:1.1;margin:0;margin-left:-.028em;color:var(--color-accent-2-900)">Lo que leemos en Córdoba</h1>
+      </section>
+
+      <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+        <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
+          <svg sc-camel-view-box="0 0 120 120" style="width:104px;height:104px" role="img" aria-label="95% de pérdida del bosque nativo">
+            <circle cx="60" cy="60" r="48" fill="none" stroke-width="16" style="stroke:var(--color-accent-2-300)"></circle>
+            <circle cx="60" cy="60" r="48" fill="none" stroke-width="16" stroke-linecap="round" stroke-dasharray="286.5 301.6" transform="rotate(-90 60 60)" style="stroke:var(--color-accent-2-700)"></circle>
+            <text x="60" y="67" text-anchor="middle" style="font-family:var(--font-heading);font-size:24px;fill:var(--color-accent-2-900)">95%</text>
+          </svg>
+          <span style="font-family:var(--font-heading);font-size:22px">El clima</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.7">Anomalías climáticas severas: lluvias cada vez más intensas y frecuentes que provocan inundaciones y anegamientos. Pérdida del 95% del bosque nativo.</p>
+        </article>
+        <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-300) 55%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
+          <svg sc-camel-view-box="0 0 120 120" style="width:104px;height:104px" role="img" aria-label="Perfil de suelo de loess">
+            <rect x="12" y="24" width="96" height="22" rx="11" style="fill:var(--color-accent-200)"></rect>
+            <rect x="12" y="52" width="96" height="22" rx="11" style="fill:var(--color-accent-500)"></rect>
+            <rect x="12" y="80" width="96" height="22" rx="11" style="fill:var(--color-accent-800)"></rect>
+          </svg>
+          <span style="font-family:var(--font-heading);font-size:22px">El suelo</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.7">Loess: sedimento rico en limo, altamente fértil, pero con tendencia al colapso estructural y la compactación extrema al saturarse y pavimentarse.</p>
+        </article>
+        <article data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
+          <svg sc-camel-view-box="0 0 120 120" style="width:104px;height:104px" role="img" aria-label="Expansión urbana monocéntrica">
+            <circle cx="60" cy="60" r="12" style="fill:var(--color-accent-2-800)"></circle>
+            <circle cx="60" cy="60" r="26" fill="none" stroke-width="7" style="stroke:var(--color-accent-2-600)"></circle>
+            <circle cx="60" cy="60" r="40" fill="none" stroke-width="7" stroke-dasharray="14 10" style="stroke:var(--color-accent-2-500)"></circle>
+            <circle cx="60" cy="60" r="54" fill="none" stroke-width="7" stroke-dasharray="8 12" style="stroke:var(--color-accent-500)"></circle>
+          </svg>
+          <span style="font-family:var(--font-heading);font-size:22px">El crecimiento</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.7">Expansión urbana monocéntrica desde los 70. Impermeabilización del suelo que desplaza servicios ecosistémicos y genera islas de calor.</p>
+        </article>
+      </section>
+
+      <section style="display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,64px);align-items:center">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <h2 style="font-family:var(--font-heading);font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0">Acciones en el barrio</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+            <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:24px;padding:22px"><span style="font-family:var(--font-heading);font-size:19px">Reforestación nativa</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Recuperación de cobertura con especies del bosque nativo.</p></div>
+            <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:24px;padding:22px"><span style="font-family:var(--font-heading);font-size:19px">Hoteles de insectos</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Corredores biológicos dentro de la trama urbana.</p></div>
+            <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:24px;padding:22px"><span style="font-family:var(--font-heading);font-size:19px">Huertas</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Desarrollo productivo y trabajo comunitario.</p></div>
+            <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:24px;padding:22px"><span style="font-family:var(--font-heading);font-size:19px">Talleres vecinales</span><p style="margin:4px 0 0;font-size:15px;line-height:1.6">Árboles de problemas: amenaza, riesgo y vulnerabilidad.</p></div>
+          </div>
+        </div>
+        <figure class="washed" style="margin:0;border-radius:32px;overflow:hidden">
+          <image-slot id="rbu2-mapa" shape="rect" style="width:100%;aspect-ratio:1/1" placeholder="Mapa o imagen satelital de Córdoba"></image-slot>
+        </figure>
+      </section>
+
+      <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}">
+        <p style="font-size:14px;line-height:1.6;margin:0;padding:14px 18px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800);width:fit-content;max-width:100%">Pendiente: escuelas y barrios donde se implementó, cifras de impacto y documentación descargable.</p>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isParticipar }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:40px">
+      <section style="display:flex;flex-direction:column;gap:16px;max-width:900px">
+        <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Participar</span>
+        <h1 style="font-family:var(--font-heading);font-size:clamp(36px,4.6vw,58px);line-height:1.1;margin:0;margin-left:-.028em;color:var(--color-accent-2-900)">Dos formas de sostener la Red</h1>
+      </section>
+
+      <section style="display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,48px);align-items:start">
+        <form data-glass="" style="background:rgba(255,255,255,.46);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.68);border-radius:32px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:20px" sc-camel-on-submit="{{ onSubmit }}">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h2 style="font-family:var(--font-heading);font-size:28px;line-height:1.2;margin:0">Quiero ser voluntario/a</h2>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:var(--color-neutral-700)">Dejanos tus datos y te contactamos por correo.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+            <div class="field"><label for="v2-nombre">Nombre y apellido</label><input class="input" id="v2-nombre" type="text" placeholder="Tu nombre"></div>
+            <div class="field"><label for="v2-email">Correo electrónico</label><input class="input" id="v2-email" type="email" placeholder="vos@correo.com"></div>
+            <div class="field"><label for="v2-tel">Teléfono (opcional)</label><input class="input" id="v2-tel" type="tel" placeholder="+54 351 ..."></div>
+            <div class="field"><label for="v2-loc">Localidad o barrio</label><input class="input" id="v2-loc" type="text" placeholder="Córdoba"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="font-weight:600;font-size:15px">¿De qué manera querés colaborar?</span>
+            <div style="display:flex;flex-wrap:wrap;gap:10px">
+              <label class="radio"><input type="checkbox" name="colab2"><span class="dot"></span>Salidas de campo y muestreos</label>
+              <label class="radio"><input type="checkbox" name="colab2"><span class="dot"></span>Talleres con escuelas</label>
+              <label class="radio"><input type="checkbox" name="colab2"><span class="dot"></span>Laboratorio y análisis de datos</label>
+              <label class="radio"><input type="checkbox" name="colab2"><span class="dot"></span>Comunicación y diseño</label>
+              <label class="radio"><input type="checkbox" name="colab2"><span class="dot"></span>Reforestación y huertas</label>
+            </div>
+          </div>
+          <div class="field"><label for="v2-msg">Contanos algo sobre vos (opcional)</label><input class="input" id="v2-msg" type="text" placeholder="Disponibilidad, experiencia, intereses"></div>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+            <span style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--color-neutral-700);background:var(--color-bg);border-radius:999px;padding:10px 16px">Verificación anti-spam</span>
+            <button type="submit" class="btn btn-primary">Enviar mi postulación</button>
+          </div>
+          <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:14px 18px;border-radius:999px;background:var(--color-accent-2-300);font-size:15px">Gracias. Recibimos tu mensaje y te escribimos a la brevedad.</p>
+          </sc-if>
+        </form>
+
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="background:linear-gradient(135deg,rgba(73,92,53,.94),rgba(30,107,43,.90));border-radius:32px;padding:clamp(24px,3vw,36px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 22px 48px rgba(14,55,32,.20);display:flex;flex-direction:column;gap:16px">
+            <h2 style="font-family:var(--font-heading);font-size:28px;line-height:1.2;margin:0;color:var(--color-bg)">Colaborar con una donación</h2>
+            <p style="margin:0;font-size:16px;line-height:1.7;color:var(--color-bg)">Tu aporte financia instrumental de medición, materiales para talleres y jornadas de reforestación.</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div data-glass="" style="background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border-radius:20px;padding:16px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:600">Transferencia bancaria</span><span style="font-size:14px;color:var(--color-neutral-800)">Alias y CBU a definir</span></div>
+              <div data-glass="" style="background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border-radius:20px;padding:16px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:600">Pago online</span><span style="font-size:14px;color:var(--color-neutral-800)">Enlace de pago a definir</span></div>
+              <div data-glass="" style="background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border-radius:20px;padding:16px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:600">Donación de materiales</span><span style="font-size:14px;color:var(--color-neutral-800)">Coordinación por correo</span></div>
+            </div>
+            <a class="btn btn-primary" href="mailto:red.biosferaurbana@gmail.com">Escribirnos sobre donaciones</a>
+          </div>
+          <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}">
+            <p style="font-size:14px;line-height:1.6;margin:0;padding:14px 18px;border-radius:24px;background:var(--color-accent-100);color:var(--color-accent-800)">Pendiente: medios concretos de donación (alias, CBU, enlaces de pago) y datos fiscales.</p>
+          </sc-if>
+        </div>
+      </section>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isContacto }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:clamp(24px,4vw,56px)">
+      
+    <section style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Contacto</span>
+          <h1 style="font-family:var(--font-heading);font-size:clamp(36px,4.6vw,58px);line-height:1.1;margin:0;margin-left:-.028em;color:var(--color-accent-2-900)">Escribinos</h1>
+          <p style="font-size:18px;line-height:1.7;margin:0;max-width:44ch">Consultas generales, voluntariado y donaciones llegan por ahora al mismo correo.</p>
+          <a class="btn btn-primary" href="mailto:red.biosferaurbana@gmail.com" style="width:fit-content">red.biosferaurbana@gmail.com</a>
+          <div data-glass="" style="display:flex;flex-direction:column;gap:12px;background:rgba(255,255,255,.46);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.68);border-radius:28px;padding:24px">
+            <span style="font-weight:600">Correos institucionales</span>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:var(--color-neutral-700)">Previstos para cuando esté habilitado el dominio definitivo, sin cambiar la estructura del sitio:</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span class="tag tag-outline">Contacto general</span>
+              <span class="tag tag-outline">Voluntariado</span>
+              <span class="tag tag-outline">Donaciones</span>
+              <span class="tag tag-outline">Administración</span>
+            </div>
+          </div>
+        </div><form data-glass="" style="background: rgba(255,255,255,.46); backdrop-filter: blur(16px) saturate(1.25); -webkit-backdrop-filter: blur(16px) saturate(1.25); border: 1px solid rgba(255,255,255,.68); border-radius: 32px; padding: clamp(24px,3vw,40px); display: flex; flex-direction: column; gap: 20px; width: 649px; height: 434px" sc-camel-on-submit="{{ onSubmit }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+            <div class="field"><label for="c2-nombre">Nombre</label><input class="input" id="c2-nombre" type="text" placeholder="Tu nombre"></div>
+            <div class="field"><label for="c2-email">Correo electrónico</label><input class="input" id="c2-email" type="email" placeholder="vos@correo.com"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="font-weight:600;font-size:15px">Motivo</span>
+            <div class="seg">
+              <label class="seg-opt"><input type="radio" name="motivo2" checked="">Consulta general</label>
+              <label class="seg-opt"><input type="radio" name="motivo2">Voluntariado</label>
+              <label class="seg-opt"><input type="radio" name="motivo2">Donaciones</label>
+              <label class="seg-opt"><input type="radio" name="motivo2">Prensa</label>
+            </div>
+          </div>
+          <div class="field"><label for="c2-msg">Mensaje</label><input class="input" id="c2-msg" type="text" placeholder="Contanos en qué podemos ayudarte" style="width: 570px; height: 110px"></div><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+            <span style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--color-neutral-700);background:var(--color-bg);border-radius:999px;padding:10px 16px">Verificación anti-spam</span><button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            
+          </div>
+          
+          <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:14px 18px;border-radius:999px;background:var(--color-accent-2-300);font-size:15px">Gracias. Recibimos tu mensaje y te escribimos a la brevedad.</p>
+          </sc-if>
+        </form>
+        
+      </section></div>
+    </sc-if>
+
+    <sc-if value="{{ isMovil }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:clamp(24px,4vw,56px);display:flex;flex-wrap:wrap;gap:40px;justify-content:center">
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:center">
+        <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-2-800)">Inicio · móvil</span>
+        <div data-glass="" style="width:390px;max-width:100%;border-radius:40px;background:rgba(255,255,255,.58);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.72);box-shadow:0 24px 56px rgba(14,55,32,.16);overflow:hidden">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 20px 12px">
+            <span style="font-family:var(--font-heading);font-size:18px">Red Biosfera Urbana</span>
+            <span style="display:grid;place-content:center;width:40px;height:40px;border-radius:50%;background:var(--color-accent-2-200);color:var(--color-accent-2-900);font-size:18px">≡</span>
+          </div>
+          <div style="padding:8px 20px 28px;display:flex;flex-direction:column;gap:20px">
+            <h2 style="font-family:var(--font-heading);font-size:32px;line-height:1.1;margin:0;color:var(--color-accent-2-900)">Ciencia ciudadana para la ciudad que habitamos.</h2>
+            <svg sc-camel-view-box="0 0 360 400" role="img" aria-label="Corte del territorio: atmósfera, biosfera, hidrosfera y litosfera" style="width:100%;height:auto;border-radius:24px;display:block">
+              <defs>
+                <linearGradient id="rbu4m-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" style="stop-color:var(--rbu-sky)"></stop>
+                  <stop offset="1" style="stop-color:#f0f6f2"></stop>
+                </linearGradient>
+                <pattern id="rbu4m-loess" width="22" height="22" sc-camel-pattern-units="userSpaceOnUse">
+                  <circle cx="5" cy="6" r="2" style="fill:#ffffff;opacity:.5"></circle>
+                  <circle cx="16" cy="15" r="1.6" style="fill:#ffffff;opacity:.38"></circle>
+                </pattern>
+                <clipPath id="rbu4m-frame"><rect x="0" y="0" width="360" height="400" rx="24"></rect></clipPath>
+              </defs>
+              <g clip-path="url(#rbu4m-frame)">
+                <rect x="0" y="0" width="360" height="400" fill="url(#rbu4m-sky)"></rect>
+                <g style="opacity:.85">
+                  <circle cx="70" cy="56" r="20" fill="#ffffff"></circle>
+                  <circle cx="98" cy="58" r="26" fill="#ffffff"></circle>
+                  <circle cx="128" cy="62" r="17" fill="#ffffff"></circle>
+                </g>
+                <g>
+                  <rect x="150" y="150" width="44" height="86" rx="10" style="fill:var(--rbu-stone)"></rect>
+                  <rect x="204" y="124" width="52" height="112" rx="12" style="fill:#8e9a98"></rect>
+                  <g style="fill:var(--rbu-sky);opacity:.75">
+                    <rect x="160" y="166" width="12" height="12" rx="3"></rect><rect x="178" y="166" width="12" height="12" rx="3"></rect>
+                    <rect x="216" y="142" width="12" height="12" rx="3"></rect><rect x="234" y="142" width="12" height="12" rx="3"></rect>
+                  </g>
+                </g>
+                <g>
+                  <rect x="62" y="186" width="10" height="50" rx="5" style="fill:var(--rbu-earth)"></rect>
+                  <circle cx="67" cy="172" r="38" style="fill:var(--color-accent-500)"></circle>
+                  <circle cx="100" cy="192" r="22" style="fill:var(--color-accent-400)"></circle>
+                  <rect x="306" y="196" width="9" height="40" rx="4.5" style="fill:var(--rbu-earth)"></rect>
+                  <circle cx="310" cy="186" r="28" style="fill:var(--color-accent-600)"></circle>
+                </g>
+                <g>
+                  <rect x="266" y="82" width="7" height="44" rx="3.5" style="fill:var(--color-accent-800)"></rect>
+                  <circle cx="269" cy="78" r="13" style="fill:var(--color-accent-600)"></circle>
+                  <circle cx="269" cy="78" r="5" style="fill:var(--color-bg)"></circle>
+                </g>
+                <rect x="0" y="236" width="360" height="34" style="fill:var(--color-accent-2-400)"></rect>
+                <rect x="0" y="266" width="360" height="72" style="fill:var(--rbu-earth-light)"></rect>
+                <rect x="0" y="266" width="360" height="72" fill="url(#rbu4m-loess)"></rect>
+                <rect x="0" y="334" width="360" height="66" style="fill:var(--rbu-earth)"></rect>
+                <path d="M0 304c30 0 30-12 60-12s30 12 60 12 30-12 60-12 30 12 60 12 30-12 60-12 60 12 60 12" fill="none" style="stroke:var(--rbu-teal);stroke-width:7;stroke-linecap:round"></path>
+                <g style="font-family:var(--font-body);font-size:15px;font-weight:700;letter-spacing:.06em">
+                  <rect x="16" y="18" width="130" height="32" rx="16" style="fill:var(--color-bg)"></rect>
+                  <text x="34" y="39" style="fill:var(--color-accent-800)">ATMÓSFERA</text>
+                  <rect x="196" y="244" width="148" height="32" rx="16" style="fill:var(--color-bg)"></rect>
+                  <text x="214" y="265" style="fill:var(--rbu-teal-ink)">HIDROSFERA</text>
+                  <rect x="16" y="352" width="126" height="32" rx="16" style="fill:var(--color-bg)"></rect>
+                  <text x="34" y="373" style="fill:var(--rbu-earth)">LITOSFERA</text>
+                </g>
+              </g>
+            </svg>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <button type="button" class="btn btn-primary btn-block">Conocer la Red</button>
+              <button type="button" class="btn btn-secondary btn-block">Sumarme como voluntario/a</button>
+              <button type="button" class="btn btn-ghost btn-block">Colaborar con una donación</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-200) 60%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:22px;padding:16px 20px"><span style="font-family:var(--font-heading);font-size:18px">Atmósfera</span><p style="margin:2px 0 0;font-size:14px;line-height:1.6">PM2.5, PM10 y aerosoles.</p></div>
+              <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-2-300) 58%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:22px;padding:16px 20px"><span style="font-family:var(--font-heading);font-size:18px">Hidrosfera</span><p style="margin:2px 0 0;font-size:14px;line-height:1.6">pH, conductividad, TDS, fosfatos.</p></div>
+              <div data-glass="" style="background:color-mix(in srgb,var(--color-accent-300) 55%,transparent);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.6);border-radius:22px;padding:16px 20px"><span style="font-family:var(--font-heading);font-size:18px">Litosfera</span><p style="margin:2px 0 0;font-size:14px;line-height:1.6">Granulometría y magnetismo.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:center">
+        <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-2-800)">Participar · móvil</span>
+        <div data-glass="" style="width:390px;max-width:100%;border-radius:40px;background:rgba(255,255,255,.58);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.72);box-shadow:0 24px 56px rgba(14,55,32,.16);overflow:hidden">
+          <div style="padding:24px 20px 28px;display:flex;flex-direction:column;gap:18px">
+            <h2 style="font-family:var(--font-heading);font-size:28px;line-height:1.15;margin:0">Quiero ser voluntario/a</h2>
+            <div class="field"><label for="m2-nombre">Nombre y apellido</label><input class="input" id="m2-nombre" type="text" placeholder="Tu nombre"></div>
+            <div class="field"><label for="m2-email">Correo electrónico</label><input class="input" id="m2-email" type="email" placeholder="vos@correo.com"></div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <span style="font-weight:600;font-size:15px">¿Cómo querés colaborar?</span>
+              <label class="radio"><input type="checkbox"><span class="dot"></span>Salidas de campo</label>
+              <label class="radio"><input type="checkbox"><span class="dot"></span>Talleres con escuelas</label>
+              <label class="radio"><input type="checkbox"><span class="dot"></span>Reforestación y huertas</label>
+            </div>
+            <button type="button" class="btn btn-primary btn-block">Enviar</button>
+            <div style="background:linear-gradient(135deg,rgba(73,92,53,.94),rgba(30,107,43,.90));border-radius:24px;padding:20px;border:1px solid rgba(255,255,255,.35);display:flex;flex-direction:column;gap:10px">
+              <span style="font-family:var(--font-heading);font-size:20px;color:var(--color-bg)">O colaborá con una donación</span>
+              <span style="font-size:14px;color:var(--color-bg)">Medios de donación a definir.</span>
+              <a class="btn btn-secondary btn-block" style="background:var(--color-bg);color:var(--color-accent-800);border-color:transparent" href="mailto:red.biosferaurbana@gmail.com">Escribirnos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;mostrarPendientes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mockup&quot;},&quot;pantallaInicial&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;inicio&quot;,&quot;institucional&quot;,&quot;proyectos&quot;,&quot;participar&quot;,&quot;contacto&quot;,&quot;movil&quot;],&quot;default&quot;:&quot;inicio&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mockup&quot;}}">
+class Component extends DCLogic {
+  state = { screen: null, enviado: false };
+  go(s) { return () => this.setState({ screen: s, enviado: false }); }
+  renderVals() {
+    const screen = this.state.screen || this.props.pantallaInicial || 'inicio';
+    return {
+      showPending: this.props.mostrarPendientes ?? true,
+      enviado: this.state.enviado,
+      isInicio: screen === 'inicio',
+      isInstitucional: screen === 'institucional',
+      isProyectos: screen === 'proyectos',
+      isParticipar: screen === 'participar',
+      isContacto: screen === 'contacto',
+      isMovil: screen === 'movil',
+      goInicio: this.go('inicio'),
+      goInstitucional: this.go('institucional'),
+      goProyectos: this.go('proyectos'),
+      goParticipar: this.go('participar'),
+      goContacto: this.go('contacto'),
+      goMovil: this.go('movil'),
+      onSubmit: (e) => { e.preventDefault(); this.setState({ enviado: true }); }
+    };
+  }
+}
+</script>
+
+
+</body></html>
