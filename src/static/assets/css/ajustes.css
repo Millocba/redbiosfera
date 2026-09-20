@@ -16,7 +16,11 @@
 /* — navegación — */
 .nav a { text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--color-accent-2-900); font-weight: 700; }
-.nav-brand { font-family: var(--font-heading); color: var(--color-text); }
+.nav-brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-heading); color: var(--color-text);
+}
+.nav-brand img { flex: none; width: 42px; height: 42px; object-fit: contain; border-radius: 50%; }
 
 /* — saltar al contenido (teclado / lectores de pantalla) — */
 .saltar {
@@ -41,6 +45,7 @@ body[data-pendientes="off"] .nota-pendiente { display: none; }
   .pagina { padding: 12px 10px 48px; }
   .lamina { border-radius: 24px; }
   .nav { flex-wrap: wrap; row-gap: 8px; }
+  .nav-brand img { width: 36px; height: 36px; }
   svg[style*="width:100%"] { border-radius: 20px; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -174,7 +174,7 @@ def wire_forms(h, fname):
     return h
 
 NAV = """    <nav class="nav" style="padding-inline:clamp(20px,4vw,56px)">
-      <a class="nav-brand" href="index.html">Red Biosfera Urbana</a>
+    <a class="nav-brand" href="index.html"><img src="assets/images/red-biosfera-urbana-avatar.jpg" alt="" width="52" height="52">Red Biosfera Urbana</a>
       <a href="institucional.html"{a_inst}>Institucional</a>
       <a href="proyectos.html"{a_proy}>Proyectos</a>
       <a href="participar.html"{a_part}>Participar</a>
