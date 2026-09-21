@@ -21,6 +21,21 @@
   font-family: var(--font-heading); color: var(--color-text);
 }
 .nav-brand img { flex: none; width: 42px; height: 42px; object-fit: contain; border-radius: 50%; }
+.hero-row { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(24px, 5vw, 64px); }
+.hero-row > div:first-child { flex: 2 1 320px; }
+.hero-logo-wrap { flex: 1 1 240px; min-width: 0; display: flex; justify-content: center; align-items: center; }
+.hero-logo-frame {
+  width: clamp(200px, 27vw, 400px); height: clamp(200px, 27vw, 400px); box-sizing: border-box;
+  background: linear-gradient(160deg, #0d2b2f, #081619);
+  border-radius: 28px; padding: 14px;
+  box-shadow: 0 18px 44px rgba(14, 55, 32, .28);
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-logo { width: 100%; height: 100%; object-fit: contain; border-radius: 18px; display: block; }
+@media (max-width: 640px) {
+  .hero-logo-frame { width: clamp(160px, 46vw, 260px); height: clamp(160px, 46vw, 260px); border-radius: 22px; padding: 10px; }
+  .hero-logo { border-radius: 14px; }
+}
 
 /* — saltar al contenido (teclado / lectores de pantalla) — */
 .saltar {
@@ -32,13 +47,40 @@
 
 /* — formularios — */
 .trampa-spam { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
-textarea.input { resize: vertical; font: inherit; }
+/* el radio "pastilla" (999px) de .input queda bien en campos de una línea,
+   pero en el textarea (multilínea, más alto) lo deforma en cápsula */
+textarea.input { resize: vertical; font: inherit; border-radius: var(--radius-lg); }
 form[data-glass] { width: 100% !important; height: auto !important; }
 form[data-glass] .input { width: 100% !important; max-width: 100% !important; }
 .aviso-enviado[hidden] { display: none; }
 
 /* — notas de contenido pendiente: se ocultan con data-pendientes="off" en <body> — */
 body[data-pendientes="off"] .nota-pendiente { display: none; }
+
+/* — pie de página — */
+.site-footer {
+  padding: clamp(40px, 6vw, 64px) clamp(24px, 4vw, 56px) clamp(20px, 3vw, 28px);
+  background: rgba(255, 255, 255, .28);
+  border-top: 1px solid var(--color-divider);
+  font-size: 14px; line-height: 1.7; color: var(--color-neutral-700);
+}
+.footer-top { display: flex; flex-wrap: wrap; gap: 32px 24px; justify-content: space-between; }
+.footer-brand { display: flex; flex-direction: column; gap: 8px; max-width: 32ch; }
+.footer-brand-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-heading); font-size: 18px; color: var(--color-text); text-decoration: none;
+}
+.footer-brand-link img { flex: none; width: 40px; height: 40px; object-fit: contain; border-radius: 50%; }
+.footer-col { display: flex; flex-direction: column; gap: 6px; }
+.footer-col > span:first-child { font-weight: 600; color: var(--color-text); }
+.site-footer a { color: var(--color-neutral-700); text-decoration: none; }
+.site-footer a:hover { color: var(--color-accent); text-decoration: underline; }
+.footer-bottom {
+  display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between;
+  margin-top: clamp(28px, 5vw, 40px); padding-top: 20px;
+  border-top: 1px solid var(--color-divider);
+  font-size: 13px; color: var(--color-neutral-600);
+}
 
 /* — responsive — */
 @media (max-width: 860px) {
@@ -55,7 +97,8 @@ body[data-pendientes="off"] .nota-pendiente { display: none; }
 /* — grillas del mockup que necesitan colapsar en pantallas chicas — */
 @media (max-width: 860px) {
   [style*="grid-template-columns:minmax(0,5fr)"],
-  [style*="grid-template-columns: minmax(0,5fr)"] {
+  [style*="grid-template-columns: minmax(0,5fr)"],
+  [style*="grid-template-columns:minmax(0,6fr) minmax(0,6fr)"] {
     grid-template-columns: minmax(0, 1fr) !important;
   }
   [style*="grid-template-columns:repeat(3,minmax(0,1fr))"] {

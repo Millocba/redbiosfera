@@ -1,5 +1,13 @@
 # Red Biosfera Urbana — configuración Apache para hosting compartido (Hostinger).
 
+# --- Tipos MIME que algunos hostings tienen desactualizados ---
+# Con X-Content-Type-Options: nosniff (ver más abajo), si el servidor no
+# declara bien el tipo, el navegador directamente no muestra la imagen.
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2  .woff2
+</IfModule>
+
 # --- URLs sin .html: /contacto en vez de /contacto.html ---
 <IfModule mod_rewrite.c>
   RewriteEngine On
